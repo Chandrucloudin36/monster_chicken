@@ -1,0 +1,204 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    namespace 'com.cloudin.monsterchicken'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.cloudin.monsterchicken"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        dataBinding = true
+        viewBinding true
+    }
+
+    ndkVersion '21.0.6113669'
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+
+    flavorDimensions += "1.0"
+    productFlavors {
+        create("dev") {
+            applicationIdSuffix = ".dev"
+            dimension = "1.0"
+            applicationIdSuffix = ".dev"
+            if (project.hasProperty("NonProduction.properties")
+                    && new File(project.property("NonProduction.properties")).exists()) {
+                Properties props = new Properties()
+                props.load(new FileInputStream(file(project.property("NonProduction.properties"))))
+            }
+        }
+        create("tobetest") {
+            applicationIdSuffix = ".test"
+            dimension = "1.0"
+            applicationIdSuffix = ".test"
+            if (project.hasProperty("NonProduction.properties")
+                    && new File(project.property("NonProduction.properties")).exists()) {
+                Properties props = new Properties()
+                props.load(new FileInputStream(file(project.property("NonProduction.properties"))))
+            }
+        }
+        create("prod") {
+            dimension = "1.0"
+            if (project.hasProperty("NonProduction.properties")
+                    && new File(project.property("NonProduction.properties")).exists()) {
+                Properties props = new Properties()
+                props.load(new FileInputStream(file(project.property("NonProduction.properties"))))
+            }
+        }
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    namespace 'com.cloudin.monsterchicken'
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            zipAlignEnabled true
+            jniDebuggable false
+            renderscriptDebuggable false
+            //signingConfig signingConfigs.releaseConfig
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def appName = "MonsterChicken"
+            def flavor = variant.productFlavors[0].name
+            def buildType = variant.buildType.name
+            def date = new Date()
+            def formattedDate = date.format('yyyy_MM_dd_HH_mm')
+
+            def flavorName = ""
+            if (flavor == 'dev') {
+                flavorName = "Dev"
+            } else if (flavor == 'stage') {
+                flavorName = "Stage"
+            } else if (flavor == 'tobetest') {
+                flavorName = "Test"
+            } else if (flavor == 'prod') {
+                flavorName = "Prod"
+            } else if (flavor == 'uat') {
+                flavorName = "Uat"
+            }
+            def newName
+            if (buildType == "release") {
+                if (flavor == 'prod')
+                    newName = "${appName}_${flavorName}_${formattedDate}_${defaultConfig.versionName}.apk"
+                else {
+                    newName = "${appName}_${flavorName}_${formattedDate}.apk"
+                }
+            } else {
+                newName = "${appName}_${flavorName}_${buildType}.apk"
+            }
+            outputFileName = newName
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //Retrofit and GSON
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+    //MultiDex
+    implementation 'com.android.support:multidex:1.0.3'
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
+
+    //Kotlin Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    kapt 'com.android.databinding:compiler:3.1.4'
+
+    //Navigation
+    def nav_version = "2.5.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //JsonImageLoader
+    def lottieVersion = "5.2.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    //ImageLoader
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    implementation 'androidx.palette:palette-ktx:1.0.0'
+    implementation('io.coil-kt:coil:2.2.1')
+    implementation('io.coil-kt:coil-svg:2.2.1')
+
+    implementation "com.google.android.libraries.places:places:3.1.0"
+    api 'com.google.android.gms:play-services-location:21.0.1'
+    api 'com.google.android.gms:play-services-maps:18.1.0'
+
+    //Firebase push notification
+    implementation platform('com.google.firebase:firebase-bom:30.3.1')
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    //Circular Imageview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //ImageCropper
+    implementation 'com.github.Yalantis:ucrop:2.2.8'
+
+    //SMS Retrieval API
+    implementation 'com.github.stfalcon-studio:SmsVerifyCatcher:0.3.3'
+}

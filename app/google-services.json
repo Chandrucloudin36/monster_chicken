@@ -1,0 +1,227 @@
+{
+  "project_info": {
+    "project_number": "18734286424",
+    "project_id": "monster-chicken-86145",
+    "storage_bucket": "monster-chicken-86145.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18734286424:android:7eb6ded817729d98f6ec2d",
+        "android_client_info": {
+          "package_name": "com.cloudin.monsterchicken"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18734286424-u59u49ljl17us7m7uvbgak2dlcge98ki.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cloudin.monsterchicken",
+            "certificate_hash": "ed581fd964a0964ac4831e13ac4dd87716fd4ace"
+          }
+        },
+        {
+          "client_id": "18734286424-j9fo2hf52223dmd845q9i124sn2j48en.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD64S_b9eBX_FUMubVOWTqq3WwOcipQOlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18734286424-j9fo2hf52223dmd845q9i124sn2j48en.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18734286424:android:b4252423899fa709f6ec2d",
+        "android_client_info": {
+          "package_name": "com.cloudin.monsterchicken.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18734286424-s6in1tdgunnetglc5anbpjr14snamvho.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cloudin.monsterchicken.dev",
+            "certificate_hash": "ed581fd964a0964ac4831e13ac4dd87716fd4ace"
+          }
+        },
+        {
+          "client_id": "18734286424-uiv3cvpkkkne13vtbch6m643lj7lgfll.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cloudin.monsterchicken.dev",
+            "certificate_hash": "c959d7e19b36566877e969935bfe938294937403"
+          }
+        },
+        {
+          "client_id": "18734286424-j9fo2hf52223dmd845q9i124sn2j48en.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD64S_b9eBX_FUMubVOWTqq3WwOcipQOlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18734286424-j9fo2hf52223dmd845q9i124sn2j48en.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18734286424:android:bb9725b26d56ba2af6ec2d",
+        "android_client_info": {
+          "package_name": "com.cloudin.monsterchicken.partner.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18734286424-8h2nasdoq77d23g5bor4jcg903n98cil.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cloudin.monsterchicken.partner.dev",
+            "certificate_hash": "c959d7e19b36566877e969935bfe938294937403"
+          }
+        },
+        {
+          "client_id": "18734286424-vb78bvgmd6kdmbjhcai21f9favar7tnd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cloudin.monsterchicken.partner.dev",
+            "certificate_hash": "ed581fd964a0964ac4831e13ac4dd87716fd4ace"
+          }
+        },
+        {
+          "client_id": "18734286424-j9fo2hf52223dmd845q9i124sn2j48en.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD64S_b9eBX_FUMubVOWTqq3WwOcipQOlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18734286424-j9fo2hf52223dmd845q9i124sn2j48en.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18734286424:android:45ec5b9a7252292af6ec2d",
+        "android_client_info": {
+          "package_name": "com.cloudin.monsterchicken.partner.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18734286424-6bm1p7knmho4gniotqf6ppmk0s737ha1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cloudin.monsterchicken.partner.test",
+            "certificate_hash": "c959d7e19b36566877e969935bfe938294937403"
+          }
+        },
+        {
+          "client_id": "18734286424-cdj91n9qmdq0p15ga90mlslagkcspf4l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cloudin.monsterchicken.partner.test",
+            "certificate_hash": "ed581fd964a0964ac4831e13ac4dd87716fd4ace"
+          }
+        },
+        {
+          "client_id": "18734286424-j9fo2hf52223dmd845q9i124sn2j48en.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD64S_b9eBX_FUMubVOWTqq3WwOcipQOlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18734286424-j9fo2hf52223dmd845q9i124sn2j48en.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18734286424:android:5faf6c92453eaa6bf6ec2d",
+        "android_client_info": {
+          "package_name": "com.cloudin.monsterchicken.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18734286424-6mca045veffd025obldg1agelb2tv8hq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cloudin.monsterchicken.test",
+            "certificate_hash": "ed581fd964a0964ac4831e13ac4dd87716fd4ace"
+          }
+        },
+        {
+          "client_id": "18734286424-ql75lv0g23ov3d4un34c5nqujs3pf0u6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cloudin.monsterchicken.test",
+            "certificate_hash": "c959d7e19b36566877e969935bfe938294937403"
+          }
+        },
+        {
+          "client_id": "18734286424-j9fo2hf52223dmd845q9i124sn2j48en.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD64S_b9eBX_FUMubVOWTqq3WwOcipQOlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18734286424-j9fo2hf52223dmd845q9i124sn2j48en.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
