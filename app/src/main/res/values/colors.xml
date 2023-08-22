@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryDark">#000099</color>
+    <color name="colorPrimary">#FF4081</color>
+    <color name="c4d4d4d">#4d4d4d</color>
+    <color name="c961A1C">#A61F23</color>
+    <color name="cFFE6E7">#F8B31A</color>
+    <color name="c1AF8B31A">#1AF8B31A</color>
+    <color name="c9B9B9B">#9B9B9B</color>
+    <color name="cF6F6F6">#F6F6F6</color>
+
+    <!--OTP View-->
+    <color name="transparent">#00000000</color>
+    <color name="grey">#a9a9a9</color>
+
+    <!--Shimmer Color-->
+    <color name="shimmer_color">#b1b1b1</color>
+    <color name="cc2c2c2">#c2c2c2</color>
+    <color name="c707070">#707070</color>
+    <color name="c999999">#999999</color>
+    <color name="c333333">#333333</color>
+</resources>

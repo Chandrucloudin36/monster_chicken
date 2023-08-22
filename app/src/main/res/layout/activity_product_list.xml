@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="productListViewModel"
+            type="com.cloudin.monsterchicken.activity.productlist.ProductListViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.productlist.ProductListActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:gravity="center|start"
+                android:background="@color/cFFE6E7"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <ImageView
+                    android:id="@+id/ivBackIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_toolbar_arrow_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="@{productListViewModel.selectedCategoryName}"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    tools:text="Omega 3 Enriched Chicken" />
+
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.cloudin.monsterchicken.utils.ShimmerFrameLayout
+                        android:id="@+id/slProductList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:shimmer_auto_start="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/cFFE6E7"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <View
+                                        android:layout_width="52dp"
+                                        android:layout_height="52dp"
+                                        android:background="@color/shimmer_color" />
+
+                                    <View
+                                        android:layout_width="30dp"
+                                        android:layout_height="15dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/shimmer_color"
+                                        android:fontFamily="@font/montserrat"
+                                        android:gravity="center"
+                                        android:maxLines="2"
+                                        android:textColor="@color/c4d4d4d"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <View
+                                        android:layout_width="52dp"
+                                        android:layout_height="52dp"
+                                        android:background="@color/shimmer_color" />
+
+                                    <View
+                                        android:layout_width="30dp"
+                                        android:layout_height="15dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/shimmer_color"
+                                        android:fontFamily="@font/montserrat"
+                                        android:gravity="center"
+                                        android:maxLines="2"
+                                        android:textColor="@color/c4d4d4d"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <View
+                                        android:layout_width="52dp"
+                                        android:layout_height="52dp"
+                                        android:background="@color/shimmer_color" />
+
+                                    <View
+                                        android:layout_width="30dp"
+                                        android:layout_height="15dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/shimmer_color"
+                                        android:fontFamily="@font/montserrat"
+                                        android:gravity="center"
+                                        android:maxLines="2"
+                                        android:textColor="@color/c4d4d4d"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="15dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/shimmer_color"
+                                android:fontFamily="@font/montserrat"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:textColor="@color/c4d4d4d"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"
+                                    android:background="@drawable/bg_shimmer_card" />
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/shimmer_color" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/shimmer_color" />
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/shimmer_color" />
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@color/shimmer_color" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.cloudin.monsterchicken.utils.ShimmerFrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llProductList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvCategoryList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/cFFE6E7"
+                            android:orientation="horizontal"
+                            android:overScrollMode="never"
+                            android:scrollbars="none"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:productCategoryList="@{productListViewModel.categoriesList}"
+                            tools:listitem="@layout/row_product_categories" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-10dp"
+                            android:background="@drawable/bg_landing_top_corner"
+                            android:orientation="vertical"
+                            android:paddingBottom="80dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text="@{productListViewModel.productCount}"
+                                android:textSize="15sp"
+                                tools:text="54 items" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvProductList"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:overScrollMode="never"
+                                android:scrollbars="none"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                app:productsList="@{productListViewModel.productItemList}"
+                                tools:itemCount="1"
+                                tools:listitem="@layout/row_product_list" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlViewCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/c961A1C"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvCartItemCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvCartItemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="₹ 255.0"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="@string/product_list_view_cart"
+                    android:textColor="@color/white"
+                    app:drawableEndCompat="@drawable/check_out_arrow" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

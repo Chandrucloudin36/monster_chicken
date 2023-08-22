@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="addAddressViewModel"
+            type="com.cloudin.monsterchicken.activity.addaddress.AddAddressViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.addaddress.AddAddressActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/white"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <ImageView
+                android:id="@+id/ivBackIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_toolbar_arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/add_address_add_address"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/tvSaveButton"
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/black"
+                            android:gravity="center"
+                            android:textColorHint="@color/black"
+                            app:backgroundTint="@color/black"
+                            app:boxStrokeWidth="0.5dp"
+                            app:hintTextColor="@color/black"
+                            app:prefixTextColor="@color/black">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tetLocality"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="10dp"
+                                android:enabled="false"
+                                android:fontFamily="@font/montserrat"
+                                android:hint="@string/add_address_activity_enter_delivery"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:padding="15dp"
+                                android:text="@={addAddressViewModel.areaAndLocality}"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/c4d4d4d"
+                                android:textCursorDrawable="@drawable/cursor_common"
+                                android:textSize="14sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/black"
+                            android:gravity="center"
+                            android:textColorHint="@color/black"
+                            app:backgroundTint="@color/black"
+                            app:boxStrokeWidth="0.5dp"
+                            app:hintTextColor="@color/black"
+                            app:prefixTextAppearance="@style/prefix"
+                            app:prefixTextColor="@color/black">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tetName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="10dp"
+                                android:enabled="true"
+                                android:fontFamily="@font/montserrat"
+                                android:hint="@string/add_address_activity_name"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:padding="15dp"
+                                android:text="@={addAddressViewModel.name}"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/c4d4d4d"
+                                android:textCursorDrawable="@drawable/cursor_common"
+                                android:textSize="14sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/black"
+                            android:gravity="center"
+                            android:textColorHint="@color/black"
+                            app:backgroundTint="@color/black"
+                            app:boxStrokeWidth="0.5dp"
+                            app:hintTextColor="@color/black"
+                            app:prefixTextAppearance="@style/prefix"
+                            app:prefixTextColor="@color/black">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tetFlatNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="10dp"
+                                android:enabled="true"
+                                android:fontFamily="@font/montserrat"
+                                android:hint="@string/add_address_activity_flat_building"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:padding="15dp"
+                                android:text="@={addAddressViewModel.flatNumber}"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/c4d4d4d"
+                                android:textCursorDrawable="@drawable/cursor_common"
+                                android:textSize="14sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/black"
+                            android:gravity="center"
+                            android:textColorHint="@color/black"
+                            app:backgroundTint="@color/black"
+                            app:boxStrokeWidth="0.5dp"
+                            app:hintTextColor="@color/black"
+                            app:prefixTextAppearance="@style/prefix"
+                            app:prefixTextColor="@color/black">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tetLandmark"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="10dp"
+                                android:enabled="true"
+                                android:fontFamily="@font/montserrat"
+                                android:hint="@string/add_address_activity_landmark"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:padding="15dp"
+                                android:text="@={addAddressViewModel.landmark}"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/c4d4d4d"
+                                android:textCursorDrawable="@drawable/cursor_common"
+                                android:textSize="14sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/black"
+                            android:gravity="center"
+                            android:textColorHint="@color/black"
+                            android:visibility="gone"
+                            app:backgroundTint="@color/black"
+                            app:boxStrokeWidth="0.5dp"
+                            app:hintTextColor="@color/black"
+                            app:prefixTextAppearance="@style/prefix"
+                            app:prefixTextColor="@color/black">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tetCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="10dp"
+                                android:enabled="false"
+                                android:fontFamily="@font/montserrat"
+                                android:hint="@string/add_address_activity_city"
+                                android:imeOptions="actionNext"
+                                android:maxLines="1"
+                                android:padding="15dp"
+                                android:text="@={addAddressViewModel.city}"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/c4d4d4d"
+                                android:textCursorDrawable="@drawable/cursor_common"
+                                android:textSize="14sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/black"
+                            android:gravity="center"
+                            android:textColorHint="@color/black"
+                            app:backgroundTint="@color/black"
+                            app:boxStrokeWidth="0.5dp"
+                            app:hintTextColor="@color/black"
+                            app:prefixTextAppearance="@style/prefix"
+                            app:prefixTextColor="@color/black">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tetMobileNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="0123456789"
+                                android:drawablePadding="10dp"
+                                android:enabled="true"
+                                android:fontFamily="@font/montserrat"
+                                android:hint="@string/add_address_activity_mobile_number"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:padding="15dp"
+                                android:text="@={addAddressViewModel.mobileNumber}"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/c4d4d4d"
+                                android:textCursorDrawable="@drawable/cursor_common"
+                                android:textSize="14sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:backgroundTint="@color/black"
+                            android:gravity="center"
+                            android:textColorHint="@color/black"
+                            app:backgroundTint="@color/black"
+                            app:boxStrokeColor="@color/cc2c2c2"
+                            app:boxStrokeWidth="0.5dp"
+                            app:endIconDrawable="@drawable/ic_dropdown"
+                            app:endIconMode="custom"
+                            app:endIconTint="@color/c707070"
+                            app:error="@{addAddressViewModel.stateNameErrorText}"
+                            app:hintTextColor="@color/black">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tetState"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint="@string/add_address_activity_state"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:maxLines="1"
+                                android:padding="15dp"
+                                android:singleLine="true"
+                                android:text="@={addAddressViewModel.stateNameText}"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textCursorDrawable="@drawable/cursor_common"
+                                android:textSize="12sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/TextInputTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:backgroundTint="@color/black"
+                            android:gravity="center"
+                            android:textColorHint="@color/black"
+                            app:backgroundTint="@color/black"
+                            app:boxStrokeColor="@color/cc2c2c2"
+                            app:boxStrokeWidth="0.5dp"
+                            app:endIconDrawable="@drawable/ic_dropdown"
+                            app:endIconMode="custom"
+                            app:endIconTint="@color/c707070"
+                            app:error="@{addAddressViewModel.districtNameErrorText}"
+                            app:hintTextColor="@color/black">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/tetDistrict"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:hint="@string/add_address_activity_district"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="50"
+                                android:maxLines="1"
+                                android:padding="15dp"
+                                android:singleLine="true"
+                                android:text="@={addAddressViewModel.districtNameText}"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textCursorDrawable="@drawable/cursor_common"
+                                android:textSize="12sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/add_address_activity_save_as"
+                            android:textColor="@color/black" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/llHome"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_white_with_stock_selected"
+                                android:gravity="center"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="5dp">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/ic_home_black_24dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/title_home"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llWork"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/bg_white_with_stock"
+                                android:gravity="center"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="5dp">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/ic_work" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/add_address_activity_work"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llOther"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_white_with_stock"
+                                android:gravity="center"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="5dp">
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:src="@drawable/ic_pin" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:fontFamily="@font/montserrat_medium"
+                                    android:text="@string/add_address_activity_other"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tetNickName"
+                            style="@style/TextInputTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/black"
+                            android:gravity="center"
+                            android:textColorHint="@color/black"
+                            android:visibility="gone"
+                            app:backgroundTint="@color/black"
+                            app:boxStrokeWidth="0.5dp"
+                            app:hintTextColor="@color/black"
+                            app:prefixTextAppearance="@style/prefix"
+                            app:prefixTextColor="@color/black">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="10dp"
+                                android:enabled="true"
+                                android:fontFamily="@font/montserrat"
+                                android:hint="@string/add_address_activity_nick_name"
+                                android:imeOptions="actionDone"
+                                android:inputType="textCapSentences"
+                                android:maxLines="1"
+                                android:padding="15dp"
+                                android:text="@={addAddressViewModel.nickname}"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/c4d4d4d"
+                                android:textCursorDrawable="@drawable/cursor_common"
+                                android:textSize="14sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/tvSaveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/common_botton"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="@string/add_address_activity_save_address"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+
+
+            </TextView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

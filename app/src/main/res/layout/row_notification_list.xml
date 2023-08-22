@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModels"
+            type="com.cloudin.monsterchicken.activity.notificationlist.NotificationListViewModel" />
+
+        <variable
+            name="notificationsDetail"
+            type="com.cloudin.monsterchicken.activity.notificationlist.Notifications" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlNotificationListParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/vwNotificationRead"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/common_botton" />
+
+        <TextView
+            android:id="@+id/tvNotificationMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@{notificationsDetail.notification}"
+            android:textColor="@color/c4d4d4d"
+            android:textSize="12sp"
+            tools:text="We're happy you've been with us for such a long time, New Customer! Here is something to brighten up your day. Use code: TEXTING00Q to avail of the offer." />
+
+        <View
+            android:id="@+id/vwDivide"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/tvNotificationMessage"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/grey" />
+
+    </RelativeLayout>
+</layout>

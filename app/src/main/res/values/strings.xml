@@ -1,0 +1,198 @@
+<resources>
+    <string name="app_name">MonsterChicken</string>
+
+    <string name="server_timeout">Server timeout! Please try again.</string>
+    <string name="no_internet_alert">Please check your internet connection and try again!</string>
+    <string name="something_went_wrong">Something went wrong! Please try again later.</string>
+    <string name="log_out_message">Are you sure you want to logout?</string>
+    <string name="delete_message">Are you sure you want to delete?</string>
+    <string name="confirm">Confirm</string>
+    <string name="exit">Exit</string>
+    <string name="version">Version - 0.1</string>
+
+    <!--Splash Activity-->
+    <string name="splash_quality_in_every_quantity">Quality in Every Quantity.</string>
+    <string name="splash_set_location_to_proceed">Set Location to Proceed</string>
+    <string name="splash_set_location">Set Location</string>
+    <string name="splash_we_need_your_location">We need your location to bring you the best chicken &amp; egg in your area</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_location">Coimbatore</string>
+    <string name="title_location1">Chinniyampalayam 10th St</string>
+
+    <!--Dashboard Activity-->
+    <string name="dashboard_shop_by_categories">Shop by categories</string>
+    <string name="dashboard_shop_only_sliced">Only Sliced with The Best Butchers In Town.</string>
+
+    <!--Product List Activity-->
+    <string name="product_list_add">Add    +</string>
+    <string name="product_list_view_cart">View Cart</string>
+    <string name="product_list_your_cart">Your Cart</string>
+    <string name="product_list_checkout">Checkout</string>
+    <string name="product_list_qty">Qty :</string>
+    <string name="product_list_brand">Brand -</string>
+    <string name="product_list_out_of_stock">Out of stock</string>
+
+    <!--Cart Activity-->
+    <string name="cart_bill_details">Bill Details</string>
+    <string name="cart_sub_total">Subtotal</string>
+    <string name="cart_total">Total</string>
+    <string name="cart_checkout">Checkout</string>
+    <string name="cart_place_order">Place order</string>
+    <string name="cart_total_">Total :</string>
+    <string name="cart_delivery_charge">Delivery Charge</string>
+    <string name="cart_discount_amount">Discount Amount</string>
+
+    <!--Login Bottom Sheet-->
+    <string name="login_bottom_sheet_login_signup_with_phone_number">Login/Signup with your Phone Number</string>
+    <string name="login_bottom_sheet_91">+91 </string>
+    <string name="login_bottom_sheet_phone_number">Phone Number</string>
+    <string name="login_bottom_sheet_proceed_with_otp">Proceed with OTP</string>
+
+    <!--Verify OTP Activity-->
+    <string name="verify_otp_verify_via_otp">Verify via OTP</string>
+    <string name="verify_otp_resend_otp">Resend OTP</string>
+    <string name="verify_otp_continue">Continue</string>
+    <string name="verify_otp_add_Address"> + Add Address</string>
+    <string name="verify_otp_shipping_address">Shipping Address</string>
+    <string name="verify_otp_enter_the_otp_sent_to_you_on">Enter the OTP sent to you on </string>
+    <string name="verify_otp_by_continuing_you_agree_to_our">By continuing you agree to our</string>
+    <string name="verify_otp_terms_conditions">Terms &amp; Conditions</string>
+    <string name="verify_otp_please_enter_otp">Please enter OTP</string>
+    <string name="verify_otp_please_enter_valid_otp">Please enter valid OTP</string>
+
+    <!--Add Address Activity-->
+    <string name="add_address_add_address">Add Address</string>
+    <string name="add_address_please_select_state">Please select state</string>
+
+    <string name="no_location_data_provided">No location data provided</string>
+    <string name="service_not_available">Sorry, the service is not available</string>
+    <string name="invalid_lat_long_used">Invalid latitude or longitude used</string>
+    <string name="no_address_found">Sorry, no address found</string>
+    <string name="address_found">Address found</string>
+    <string name="no_suggestion_found">No suggestion found.</string>
+    <string name="user_agreed_to_make_required_location_settings_changes">User agreed to make required location settings
+        changes.
+    </string>
+    <string name="user_choose_not_to_make_required_location_settings_changes">User choose not to make required location
+        settings changes.
+    </string>
+    <string name="user_interaction_was_cancelled">User interaction was cancelled.</string>
+    <string name="all_location_settings_are_satisfied">All location settings are satisfied.</string>
+    <string name="location_settings_are_inadequate_and_cannot_be_fixed_here">Location settings are inadequate and cannotbe fixed here. Fix in Settings.</string>
+    <string name="missing_permission_title">Missing Permission</string>
+    <string name="missing_permission_message">Please allow us to access your permission to serve you better.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="permission">Permission</string>
+    <!--Map Activity-->
+    <string name="searching">Searching…</string>
+
+    <!--Auto Complete Activity-->
+    <string name="enter_address_place">Enter an address or place</string>
+    <string name="search_results_appear_here">Search results appear here</string>
+
+    <string name="location_settings_are_not_satisfied" translatable="false">Location settings are not satisfied. Attempting to upgrade
+        location settings
+    </string>
+    <string name="pendingintent_unable_to_execute_request" translatable="false">PendingIntent unable to execute request.</string>
+    <string name="something_went_worng">Something went wrong, please try again.</string>
+
+    <!--Add address activity-->
+    <string name="add_address_activity_enter_delivery">Enter delivery area/locality</string>
+    <string name="add_address_activity_flat_building">Flat no. / Building name / Street name</string>
+    <string name="add_address_activity_landmark">Landmark</string>
+    <string name="add_address_activity_name">Name</string>
+    <string name="add_address_activity_please_enter_name">Please enter name</string>
+    <string name="add_address_activity_city">City</string>
+    <string name="add_address_activity_mobile_number">Mobile number</string>
+    <string name="add_address_activity_save_as">Save as</string>
+    <string name="add_address_activity_work">Work</string>
+    <string name="add_address_activity_other">Other</string>
+    <string name="add_address_activity_save_address">Save Address</string>
+    <string name="add_address_activity_nick_name">Nickname (eg. My Office)</string>
+    <string name="add_address_activity_enter_flat_no">Please enter Flat no. / Building name / Street name</string>
+    <string name="add_address_activity_enter_mobile_number">Please enter Mobile number</string>
+    <string name="add_address_activity_enter_landmark">Please enter LandMark</string>
+    <string name="add_address_activity_enter_nick_name">Please enter Nick Name</string>
+    <string name="add_address_activity_change">Change</string>
+    <string name="add_address_activity_state">State*</string>
+    <string name="add_address_activity_district">District*</string>
+    <string name="add_address_activity_please_select_state">Please select state</string>
+    <string name="add_address_activity_please_select_district">Please select district</string>
+    <string name="add_address_activity_total_effective_saving">Yay! Your total effective saving is</string>
+    <string name="add_address_activity_enter_valid_mobile_number">Please enter valid Mobile number</string>
+
+    <!--Address List Activity-->
+    <string name="address_list_activity">Saved Addresses</string>
+    <string name="address_list_activity_your_orders">Your Orders</string>
+    <string name="address_list_activity_add_new_address">Add new address</string>
+    <string name="address_list_activity_proceed">Proceed</string>
+    <string name="address_list_activity_mobile">Mobile :</string>
+    <string name="address_list_activity_apply_coupon">Apply Coupon</string>
+    <string name="address_list_activity_offer_applied">Offer Applied</string>
+    <string name="address_list_activity_apply">Apply</string>
+    <string name="address_list_activity_remove">Remove</string>
+    <string name="address_list_activity_choose_payment_method">Choose Payment Method</string>
+    <string name="address_list_activity_have_a_coupon_code">Have a coupon code? Apply here</string>
+    <string name="address_list_activity_location_not_available">Oops, looks like we don\'t serve your area!</string>
+
+    <!--Profile Fragment-->
+    <string name="profile_fragment_hey_chicken_lover">Hey ChickenLover,</string>
+    <string name="profile_fragment_login_sign_up">Login/ Sign Up</string>
+    <string name="profile_fragment_login_new_user">New User</string>
+    <string name="profile_fragment_pipe">|</string>
+    <string name="profile_fragment_edit">Edit</string>
+    <string name="profile_fragment_delete">Delete</string>
+    <string name="profile_fragment_orders">Orders</string>
+    <string name="profile_fragment_cash_on_delivery">Cash On Delivery</string>
+    <string name="profile_fragment_razorpay">Razorpay</string>
+    <string name="profile_fragment_addresses">Addresses</string>
+    <string name="profile_fragment_notifications">Notifications</string>
+    <string name="profile_fragment_logout">Logout</string>
+    <string name="profile_fragment_guest">guest.in</string>
+    <string name="profile_fragment_pay_on_delivery">Pay On Delivery</string>
+    <string name="profile_fragment_pay_online">Pay Online</string>
+    <string name="profile_fragment_place_order">Place order</string>
+    <string name="profile_fragment_view_invoice">View Invoice</string>
+    <string name="profile_fragment_notification_list">Notifications</string>
+    <string name="profile_fragment_x">X</string>
+    <string name="profile_fragment_notification_updated_successfully">Notification status updated successfully!</string>
+    <string name="profile_fragment_your_order_confirmed_successfully">Your order confirmed successfully!</string>
+    <string name="profile_fragment_welcome_to_monster_chicken">Welcome to MonsterChicken. Manage your orders, addresses &amp; other details.</string>
+
+    <!--Firebase push notification Token-->
+    <string name="default_notification_channel_id" translatable="false">fcm_monster_chicken</string>
+    <string name="default_notification_channel_name" translatable="true">MonsterChicken</string>
+
+    <!--Update Profile-->
+    <string name="update_profile">Update Profile</string>
+    <string name="update_profile_name">Name</string>
+    <string name="update_profile_male">Male</string>
+    <string name="update_profile_fe_male">Female</string>
+    <string name="update_profile_update">Update Profile</string>
+    <string name="update_profile_email_id">Email ID</string>
+    <string name="update_profile_enter_name">Please enter name</string>
+    <string name="update_profile_details_updated_successfully">Profile details updated successfully!</string>
+    <string name="update_profile_enter_email">Please enter email</string>
+
+    <!--Image picker libs strings-->
+    <string name="image_picker_provider_authority_suffix" translatable="false">.imagepicker.provider</string>
+    <string name="title_choose_image_provider">Choose</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="title_gallery">Gallery</string>
+    <string name="title_camera">Camera</string>
+    <string name="title_image">Image</string>
+    <string name="title_document">Document</string>
+    <string name="permission_camera_denied">
+        <![CDATA[Camera permission is needed to take a picture. Please allow permission from Settings > Permissions.]]></string>
+    <string name="error_failed_to_create_camera_image_file">Failed to create Camera image file</string>
+    <string name="error_failed_pick_gallery_image">Failed to pick Gallery image</string>
+    <string name="error_failed_to_crop_image">Failed to crop image</string>
+    <string name="error_failed_to_compress_image">Failed to compress image</string>
+    <string name="error_task_cancelled">Task Cancelled</string>
+    <string name="error_camera_app_not_found">Camera app not found</string>
+
+</resources>

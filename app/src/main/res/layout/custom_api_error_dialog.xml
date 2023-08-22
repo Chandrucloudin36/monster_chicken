@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="3dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_error_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_error_dialog" />
+
+            <TextView
+                android:id="@+id/tv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/common_botton"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingStart="50dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="50dp"
+                android:paddingBottom="10dp"
+                android:text="Ok"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

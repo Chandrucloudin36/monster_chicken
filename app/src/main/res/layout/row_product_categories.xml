@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModels"
+            type="com.cloudin.monsterchicken.activity.productlist.ProductListViewModel" />
+
+        <variable
+            name="categoriesList"
+            type="com.cloudin.monsterchicken.activity.dashboard.ui.home.CategoriesList" />
+
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            loadImage='@{categoriesList.imageUrl[0].file_url ?? ""}'
+            android:layout_width="52dp"
+            android:layout_height="52dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:gravity="center"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="@{categoriesList.categoryName}"
+            android:textColor="@color/c4d4d4d"
+            android:textSize="12sp"
+            tools:text="Egg" />
+
+        <LinearLayout
+            android:id="@+id/llDivider"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/bg_products_top_corner"
+            android:orientation="vertical"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+</layout>

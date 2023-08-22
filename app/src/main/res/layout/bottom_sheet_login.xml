@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_dialog_background"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/login_bottom_sheet_login_signup_with_phone_number"
+            android:textColor="@color/black" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="@color/black"
+            android:gravity="center"
+            android:textColorHint="@color/black"
+            app:backgroundTint="@color/black"
+            app:boxStrokeWidth="0.5dp"
+            app:hintTextColor="@color/black"
+            app:prefixText="@string/login_bottom_sheet_91"
+            app:prefixTextAppearance="@style/prefix"
+            app:prefixTextColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tetPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:hint="@string/login_bottom_sheet_phone_number"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@drawable/cursor_common"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvProceedWithOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_button_un_selected"
+            android:enabled="false"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/login_bottom_sheet_proceed_with_otp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

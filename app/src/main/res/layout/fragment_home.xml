@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="homeViewModels"
+            type="com.cloudin.monsterchicken.activity.dashboard.ui.home.HomeViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.productlist.ProductListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.dashboard.ui.home.HomeFragment">
+
+        <com.cloudin.monsterchicken.utils.ShimmerFrameLayout
+            android:id="@+id/slDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:shimmer_auto_start="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp">
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center"
+                        android:background="@color/shimmer_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:background="@color/shimmer_color" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/shimmer_color" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_shimmer_card" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        android:text="@string/dashboard_shop_by_categories"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="@string/dashboard_shop_only_sliced"
+                        android:textColor="@color/c4d4d4d"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:background="@color/shimmer_color" />
+
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/shimmer_color"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:textColor="@color/c4d4d4d"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:background="@color/shimmer_color" />
+
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/shimmer_color"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:textColor="@color/c4d4d4d"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:background="@color/shimmer_color" />
+
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/shimmer_color"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:textColor="@color/c4d4d4d"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:background="@color/shimmer_color" />
+
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/shimmer_color"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:textColor="@color/c4d4d4d"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:background="@color/shimmer_color" />
+
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/shimmer_color"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:textColor="@color/c4d4d4d"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:background="@color/shimmer_color" />
+
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/shimmer_color"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:textColor="@color/c4d4d4d"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:background="@color/shimmer_color" />
+
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/shimmer_color"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:textColor="@color/c4d4d4d"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </com.cloudin.monsterchicken.utils.ShimmerFrameLayout>
+
+        <LinearLayout
+            android:id="@+id/llAddressHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_location" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvSavedCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semi_bold"
+                        tools:text="@string/title_location"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/ic_drop_down" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSavedAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/montserrat"
+                    tools:text="@string/title_location1"
+                    android:textColor="@color/c4d4d4d"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.cloudin.monsterchicken.utils.autoimageslider.SliderView
+            android:id="@+id/bannerSlider"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="right"
+            app:sliderAutoCycleEnabled="false"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="1.5dp"
+            app:sliderIndicatorSelectedColor="@color/c961A1C"
+            app:sliderIndicatorUnselectedColor="#eaeaea"
+            app:sliderScrollTimeInSec="1"
+            app:sliderStartAutoCycle="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="@string/dashboard_shop_by_categories"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/dashboard_shop_only_sliced"
+                android:textColor="@color/c4d4d4d"
+                android:textSize="12sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCategoriesList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                app:dashboardCategoriesList="@{homeViewModels.categoriesList}"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                tools:listitem="@layout/row_dashboard_categories" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rlViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/c961A1C"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvCartItemCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvCartItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="₹ 255.0"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:text="@string/product_list_view_cart"
+                android:textColor="@color/white"
+                app:drawableEndCompat="@drawable/check_out_arrow" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
+
+</layout>
