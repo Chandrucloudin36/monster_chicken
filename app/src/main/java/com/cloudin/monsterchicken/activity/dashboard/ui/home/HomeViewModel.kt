@@ -26,6 +26,7 @@ class HomeViewModel(application: Application) : CloudInBaseViewModel(application
     val categoriesList = MutableLiveData<MutableList<CategoriesList>>()
     val bannersList = MutableLiveData<MutableList<String>>()
     val cart_count = MutableLiveData<Int?>()
+    val cartCountString = MutableLiveData<String?>()
     val cart_amount = MutableLiveData<String?>()
     val isDashboardReceived = MutableLiveData<Boolean>(false)
 
@@ -50,11 +51,11 @@ class HomeViewModel(application: Application) : CloudInBaseViewModel(application
                     print(dashboardCartResponse.response!!.data!!.total_cart_count)
                     cart_count.value=dashboardCartResponse!!.response!!.data!!.total_cart_count
                     cart_amount.value=dashboardCartResponse!!.response!!.data!!.total_cart_price
-                   // cartCountString.value = "" + cartCount.value + "Items"
+                    cartCountString.value = "" + cart_count.value + "Items"
 
                     Log.d("dashboardCartResponse1",cart_count.value.toString())
                     Log.d("dashboardCartResponse2",cart_amount.value.toString())
-                    Log.d("dashboardCartResponse3",dashboardCartResponse.toString())
+                    Log.d("dashboardCartResponse5",dashboardCartResponse.toString())
 
                 } else {
                     val errorList: MutableList<String> = ArrayList()

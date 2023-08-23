@@ -74,6 +74,7 @@ class ProductListActivity : CloudInBaseActivity() {
                     categoriesListItemValue.categoryName
                 startShimmer()
                 productListViewModel.getProductList()
+               // productListViewModel.getCartvalue()
             }
 
         productListViewModel.cartCountString.observe(this) {
@@ -108,6 +109,7 @@ class ProductListActivity : CloudInBaseActivity() {
         super.onResume()
         startShimmer()
         productListViewModel.getProductList()
+       // productListViewModel.getCartvalue()
     }
 
     private fun startShimmer() {

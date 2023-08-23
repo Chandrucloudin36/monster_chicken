@@ -185,12 +185,14 @@ class HomeFragment : CloudInFragment() {
             fragmentHomeBinding.rlViewCart.visibility = View.VISIBLE
         })*/
 
-        homeViewModel.cart_count.observe(this) {
+        homeViewModel.cartCountString.observe(this) {
             if (homeViewModel.cart_count.value!! > 0) {
+
+                Log.d("cartamount",homeViewModel.cart_amount.value.toString())
 
                 fragmentHomeBinding.tvCartItemCount.text =
                     "" + homeViewModel.cart_count.value + " Item  |  "
-                fragmentHomeBinding.tvCartItemPrice.text = homeViewModel.cart_amount.value
+                fragmentHomeBinding.tvCartItemPrice.text = homeViewModel.cart_amount.value.toString()
                 fragmentHomeBinding.rlViewCart.visibility = View.VISIBLE
             } else
                 fragmentHomeBinding.rlViewCart.visibility = View.GONE

@@ -1,17 +1,22 @@
 package com.cloudin.monsterchicken.activity.productlist
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.cloudin.monsterchicken.TaskApplication
 import com.cloudin.monsterchicken.activity.dashboard.ui.home.CartLists
 import com.cloudin.monsterchicken.activity.dashboard.ui.home.CategoriesList
+import com.cloudin.monsterchicken.activity.dashboard.ui.home.DashboardCartResponse
 import com.cloudin.monsterchicken.activity.dashboard.ui.home.DashboardResponse
 import com.cloudin.monsterchicken.activity.dashboard.ui.home.ProductList
 import com.cloudin.monsterchicken.baseApiCalls.CloudInBaseViewModel
 import com.cloudin.monsterchicken.utils.API_ADD_TO_CART
+import com.cloudin.monsterchicken.utils.API_GET_CART_DATA_DASHBOARD
 import com.cloudin.monsterchicken.utils.API_GET_PRODUCT_LIST
+import com.cloudin.monsterchicken.utils.CloudInPreferenceManager
 import com.cloudin.monsterchicken.utils.NativeUtils
+import com.cloudin.monsterchicken.utils.USER_UNIQUE_TOKEN
 import kotlinx.coroutines.launch
 import org.json.JSONObject
 
@@ -22,8 +27,8 @@ class ProductListViewModel(application: Application) : CloudInBaseViewModel(appl
     val selectedCategoryName = MutableLiveData<String>()
     val productCount = MutableLiveData<String>()
     val lastSelectedPosition = MutableLiveData<Int>()
-    val cartCount = MutableLiveData<Int>()
-    val cartTotalPrice = MutableLiveData<String>()
+    val cartCount = MutableLiveData<Int?>()
+    val cartTotalPrice = MutableLiveData<String?>()
     val cartCountString = MutableLiveData<String>()
     private val isNeedsToUpdateCartCount = MutableLiveData<Boolean>(false)
     val categoriesList = MutableLiveData<MutableList<CategoriesList>>()
@@ -31,6 +36,40 @@ class ProductListViewModel(application: Application) : CloudInBaseViewModel(appl
     private val cartItemList = MutableLiveData<MutableList<CartLists>>()
 
 
+    fun getCartvalue() {
+        val token= CloudInPreferenceManager.getString(USER_UNIQUE_TOKEN, "")
+        Log.d("cartvalueeeeeee","testt")
+        Log.d("cartvalueeeeeee", API_GET_CART_DATA_DASHBOARD +"?unique_token="+token)
+        Log.d("cartvalueeeeeee","testt")
+        viewModelScope.launch {
+
+            val dashboardCartResponse = callGetApi<DashboardCartResponse>(
+                context,
+                tasksRepository,
+                NativeUtils.getAppDomainURL(API_GET_CART_DATA_DASHBOARD +"?unique_token="+token),
+                JSONObject(),
+                false
+            )
+            if (dashboardCartResponse != null) {
+                if (dashboardCartResponse.status) {
+                    print(dashboardCartResponse.response!!.data!!.total_cart_count)
+                    cartCount.value=dashboardCartResponse!!.response!!.data!!.total_cart_count
+                    cartTotalPrice.value=dashboardCartResponse!!.response!!.data!!.total_cart_price
+                    cartCountString.value = "" + cartCount.value + "Items"
+                    // cartCountString.value = "" + cartCount.value + "Items"
+
+                    Log.d("dashboardCartResponse1",cartCount.value.toString())
+                    Log.d("dashboardCartResponse2",cartTotalPrice.value.toString())
+                    Log.d("dashboardCartResponse3",dashboardCartResponse.toString())
+
+                } else {
+                    val errorList: MutableList<String> = ArrayList()
+                    errorList.addAll(dashboardCartResponse.message!!)
+                    errorList(errorList)
+                }
+            }
+        }
+    }
     fun getProductList() {
         val productListJSONObject = JSONObject()
         productListJSONObject.put("product_category_id", selectedCategoryId.value)
@@ -106,6 +145,7 @@ class ProductListViewModel(application: Application) : CloudInBaseViewModel(appl
                     if (dashboardResponse.status) {
                         isNeedsToUpdateCartCount.value = true
                         getProductList()
+                     //  getCartvalue()
                     } else {
                         val errorList: MutableList<String> = ArrayList()
                         errorList.addAll(dashboardResponse.message!!)
@@ -137,6 +177,7 @@ class ProductListViewModel(application: Application) : CloudInBaseViewModel(appl
                             if (dashboardResponse.status) {
                                 isNeedsToUpdateCartCount.value = true
                                 getProductList()
+                                //getCartvalue()
                             } else {
                                 val errorList: MutableList<String> = ArrayList()
                                 errorList.addAll(dashboardResponse.message!!)
