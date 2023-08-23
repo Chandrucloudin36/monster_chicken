@@ -30,6 +30,7 @@ class ProductListViewModel(application: Application) : CloudInBaseViewModel(appl
     val productItemList = MutableLiveData<MutableList<ProductList>>()
     private val cartItemList = MutableLiveData<MutableList<CartLists>>()
 
+
     fun getProductList() {
         val productListJSONObject = JSONObject()
         productListJSONObject.put("product_category_id", selectedCategoryId.value)

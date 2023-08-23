@@ -1,13 +1,17 @@
 package com.cloudin.monsterchicken.activity.dashboard.ui.home
 
+import SharedViewModel
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.cloudin.monsterchicken.activity.dashboard.DashboardActivity
 import com.cloudin.monsterchicken.activity.productlist.ProductListViewModel
 import com.cloudin.monsterchicken.baseApiCalls.errorDialog
@@ -16,11 +20,14 @@ import com.cloudin.monsterchicken.baseApiCalls.showLoader
 import com.cloudin.monsterchicken.commonclass.CloudInFragment
 import com.cloudin.monsterchicken.databinding.ActivityProductListBinding
 import com.cloudin.monsterchicken.databinding.FragmentHomeBinding
+import com.cloudin.monsterchicken.utils.CART_AMOUNT
+import com.cloudin.monsterchicken.utils.CART_COUNT
 import com.cloudin.monsterchicken.utils.CloudInPreferenceManager
 import com.cloudin.monsterchicken.utils.USER_LAT
 import com.cloudin.monsterchicken.utils.USER_LOCATION_LOCALITY
 import com.cloudin.monsterchicken.utils.USER_LOCATION_STRING
 import com.cloudin.monsterchicken.utils.USER_LONG
+import com.cloudin.monsterchicken.utils.USER_PHONE_NUMBER
 import com.cloudin.monsterchicken.utils.USER_UNIQUE_TOKEN
 import com.cloudin.monsterchicken.utils.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.cloudin.monsterchicken.utils.autoimageslider.SliderAnimations
@@ -32,9 +39,10 @@ import com.cloudin.monsterchicken.utils.mappicker.utils.PickerType
 class HomeFragment : CloudInFragment() {
 
     private lateinit var fragmentHomeBinding: FragmentHomeBinding
-    private val homeViewModel: HomeViewModel by viewModels()
-    private val productListViewModel: ProductListViewModel by viewModels()
     private lateinit var productListBinding: ActivityProductListBinding
+    private val productListViewModel: ProductListViewModel by viewModels()
+    private val homeViewModel: HomeViewModel by viewModels()
+    private val sharedViewModel: SharedViewModel by viewModels()
     private lateinit var dashboardActivity: DashboardActivity
     private lateinit var dashboardCategoriesAdapter: DashboardCategoriesAdapter
 
@@ -60,6 +68,7 @@ class HomeFragment : CloudInFragment() {
                         ""
                     )
                     homeViewModel.getDashboard()
+                    homeViewModel.getCartvalue()
                 }
             }
         }
@@ -90,6 +99,7 @@ class HomeFragment : CloudInFragment() {
         initView()
     }
 
+    @SuppressLint("FragmentLiveDataObserve")
     private fun initView() {
         homeViewModel.errorListLiveData.observe(dashboardActivity) {
             dashboardActivity.errorDialog(it, dashboardActivity)
@@ -137,17 +147,7 @@ class HomeFragment : CloudInFragment() {
             }
         }
 
-        productListViewModel.cartCountString.observe(this) {
-            if (productListViewModel.cartCount.value!! > 0) {
-                productListBinding.tvCartItemCount.text =
-                    "" + productListViewModel.cartCount.value + " Item  |  "
-                productListBinding.tvCartItemPrice.text = productListViewModel.cartTotalPrice.value
-                productListBinding.rlViewCart.visibility = View.VISIBLE
-            } else
-                productListBinding.rlViewCart.visibility = View.GONE
 
-            stopShimmer()
-        }
 
         fragmentHomeBinding.llAddressHeader.setOnClickListener {
             val intent = CloudinPlacePicker.Builder(dashboardActivity)
@@ -175,7 +175,48 @@ class HomeFragment : CloudInFragment() {
                 fragmentHomeBinding.bannerSlider.visibility = View.GONE
         }
 
+        /*sharedViewModel.sharedValue.observe(this, Observer { newValue ->
+            Log.d("check countttttt", sharedViewModel.sharedValue.toString())
+            Log.d("check countttttt", sharedViewModel.sharedValue.toString())
+            Log.d("check countttttt", sharedViewModel.sharedValue.toString())
+            fragmentHomeBinding.tvCartItemCount.text =
+                "" + sharedViewModel.sharedValue+ " Item  |  "
+            fragmentHomeBinding.tvCartItemPrice.text = sharedViewModel.sharedValue.toString()
+            fragmentHomeBinding.rlViewCart.visibility = View.VISIBLE
+        })*/
 
+        homeViewModel.cart_count.observe(this) {
+            if (homeViewModel.cart_count.value!! > 0) {
+
+                fragmentHomeBinding.tvCartItemCount.text =
+                    "" + homeViewModel.cart_count.value + " Item  |  "
+                fragmentHomeBinding.tvCartItemPrice.text = homeViewModel.cart_amount.value
+                fragmentHomeBinding.rlViewCart.visibility = View.VISIBLE
+            } else
+                fragmentHomeBinding.rlViewCart.visibility = View.GONE
+
+           // stopShimmer()
+        }
+
+
+      /*  var count=CloudInPreferenceManager.getString(CART_COUNT, "")
+        var amnt=CloudInPreferenceManager.getString(CART_AMOUNT, "")
+        if(count != null || count != ""){
+          //  productListViewModel.cartCountString.observe(this) {
+                Log.d("check countttttt", count.toString())
+                Log.d("check countttttt", count.toString())
+                Log.d("check countttttt", count.toString())
+            fragmentHomeBinding.tvCartItemCount.text =
+                "" + count+ " Item  |  "
+            fragmentHomeBinding.tvCartItemPrice.text = amnt
+                //fragmentHomeBinding.tvCartItemCount.text =
+               //     "" + productListViewModel.cartCount.value + " Item  |  "
+                //fragmentHomeBinding.tvCartItemPrice.text = productListViewModel.cartTotalPrice.value
+                fragmentHomeBinding.rlViewCart.visibility = View.VISIBLE
+            }
+        else{
+
+            }*/
 
 
         fragmentHomeBinding.bannerSlider.setSliderAdapter(dashboardBannerSliderListAdapter)
@@ -184,11 +225,7 @@ class HomeFragment : CloudInFragment() {
         fragmentHomeBinding.bannerSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
 
     }
-    private fun stopShimmer() {
-        productListBinding.slProductList.stopShimmer()
-        productListBinding.slProductList.visibility = View.GONE
-        productListBinding.llProductList.visibility = View.VISIBLE
-    }
+
 
     override fun onResume() {
         super.onResume()
@@ -198,6 +235,7 @@ class HomeFragment : CloudInFragment() {
             homeViewModel.getUniqueToken()
         else
             homeViewModel.getDashboard()
+        homeViewModel.getCartvalue()
     }
 
 }

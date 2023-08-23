@@ -1,10 +1,12 @@
 package com.cloudin.monsterchicken.activity.productlist
 
+import SharedViewModel
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
 import com.cloudin.monsterchicken.R
 import com.cloudin.monsterchicken.activity.cart.CartActivity
 import com.cloudin.monsterchicken.activity.dashboard.ui.home.CategoriesList
@@ -22,6 +24,7 @@ class ProductListActivity : CloudInBaseActivity() {
 
     private lateinit var productListBinding: ActivityProductListBinding
     private val productListViewModel: ProductListViewModel by viewModels()
+    private val sharedViewModel: SharedViewModel by viewModels()
     private lateinit var productCategoriesAdapter: ProductCategoriesAdapter
     private lateinit var productAdapter: ProductAdapter
 
@@ -75,6 +78,8 @@ class ProductListActivity : CloudInBaseActivity() {
 
         productListViewModel.cartCountString.observe(this) {
             if (productListViewModel.cartCount.value!! > 0) {
+                sharedViewModel.setSharedValue(productListViewModel.cartCount.value.toString())
+
                 CloudInPreferenceManager.setString(CART_COUNT, productListViewModel.cartCount.value.toString())
                 CloudInPreferenceManager.setString(CART_AMOUNT, productListViewModel.cartTotalPrice.value.toString())
                 productListBinding.tvCartItemCount.text =

@@ -1,26 +1,26 @@
 {
   "buildFiles": [
-    "/Users/cloudin/Desktop/chandru/mc/monster_chicken_android-main/app/src/main/cpp/CMakeLists.txt"
+    "/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/src/main/cpp/CMakeLists.txt"
   ],
   "cleanCommandsComponents": [
     [
       "/Users/cloudin/Library/Android/sdk/cmake/3.22.1/bin/ninja",
       "-C",
-      "/Users/cloudin/Desktop/chandru/mc/monster_chicken_android-main/app/.cxx/Debug/1c2s1yk4/x86_64",
+      "/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/.cxx/Debug/1c2s1yk4/x86_64",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
     "/Users/cloudin/Library/Android/sdk/cmake/3.22.1/bin/ninja",
     "-C",
-    "/Users/cloudin/Desktop/chandru/mc/monster_chicken_android-main/app/.cxx/Debug/1c2s1yk4/x86_64",
+    "/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/.cxx/Debug/1c2s1yk4/x86_64",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
     "cloudin-jni::@6890427a1f51a3e7e1df": {
       "artifactName": "cloudin-jni",
       "abi": "x86_64",
-      "output": "/Users/cloudin/Desktop/chandru/mc/monster_chicken_android-main/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/x86_64/libcloudin-jni.so",
+      "output": "/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/x86_64/libcloudin-jni.so",
       "runtimeFiles": []
     }
   }

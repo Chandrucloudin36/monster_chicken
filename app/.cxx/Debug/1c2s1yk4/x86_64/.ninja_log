@@ -1,3 +1,3 @@
 # ninja log v5
-0	2102	1691562856531773465	CMakeFiles/cloudin-jni.dir/cloudin-jni.cpp.o	74a595670db1658
-2106	2251	1691562856686545768	/Users/cloudin/Desktop/chandru/mc/monster_chicken_android-main/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/x86_64/libcloudin-jni.so	409c518499e75984
+0	1693	1692689509456933565	CMakeFiles/cloudin-jni.dir/cloudin-jni.cpp.o	7b05de1d70fdd157
+1695	1800	1692689509572746143	/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/x86_64/libcloudin-jni.so	5eb22f4875e42c6f
