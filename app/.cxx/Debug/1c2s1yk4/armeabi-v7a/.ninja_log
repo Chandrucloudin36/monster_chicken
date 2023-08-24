@@ -1,0 +1,19 @@
+# ninja log v5
+0	2728	1692850499919687324	CMakeFiles/cloudin-jni.dir/cloudin-jni.cpp.o	27d3c9b4b2bd0711
+2730	2856	1692850500058423164	/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/armeabi-v7a/libcloudin-jni.so	efbf94eca75af9d1
+0	42	0	clean	f4d60a9d437a1758
+0	13	0	clean	f4d60a9d437a1758
+0	16	0	clean	f4d60a9d437a1758
+0	14	0	clean	f4d60a9d437a1758
+0	15	0	clean	f4d60a9d437a1758
+0	13	0	clean	f4d60a9d437a1758
+1	895	1692850657808604740	CMakeFiles/cloudin-jni.dir/cloudin-jni.cpp.o	27d3c9b4b2bd0711
+896	1052	1692850657969278042	/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/armeabi-v7a/libcloudin-jni.so	efbf94eca75af9d1
+0	20	0	clean	f4d60a9d437a1758
+0	21	0	clean	f4d60a9d437a1758
+1	14	0	clean	f4d60a9d437a1758
+1	14	0	clean	f4d60a9d437a1758
+0	13	0	clean	f4d60a9d437a1758
+0	15	0	clean	f4d60a9d437a1758
+2	1778	1692852251752250665	CMakeFiles/cloudin-jni.dir/cloudin-jni.cpp.o	27d3c9b4b2bd0711
+1778	1912	1692852251890353765	/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/armeabi-v7a/libcloudin-jni.so	efbf94eca75af9d1

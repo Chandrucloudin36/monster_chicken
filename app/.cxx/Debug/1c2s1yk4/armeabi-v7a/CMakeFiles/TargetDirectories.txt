@@ -1,0 +1,3 @@
+/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/.cxx/Debug/1c2s1yk4/armeabi-v7a/CMakeFiles/cloudin-jni.dir
+/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/.cxx/Debug/1c2s1yk4/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/.cxx/Debug/1c2s1yk4/armeabi-v7a/CMakeFiles/rebuild_cache.dir
