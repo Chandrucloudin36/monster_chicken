@@ -3,6 +3,7 @@ package com.cloudin.monsterchicken.activity.dashboard.ui.home
 import SharedViewModel
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import com.cloudin.monsterchicken.activity.cart.CartActivity
 import com.cloudin.monsterchicken.activity.dashboard.DashboardActivity
 import com.cloudin.monsterchicken.activity.productlist.ProductListViewModel
 import com.cloudin.monsterchicken.baseApiCalls.errorDialog
@@ -200,33 +202,19 @@ class HomeFragment : CloudInFragment() {
            // stopShimmer()
         }
 
-
-      /*  var count=CloudInPreferenceManager.getString(CART_COUNT, "")
-        var amnt=CloudInPreferenceManager.getString(CART_AMOUNT, "")
-        if(count != null || count != ""){
-          //  productListViewModel.cartCountString.observe(this) {
-                Log.d("check countttttt", count.toString())
-                Log.d("check countttttt", count.toString())
-                Log.d("check countttttt", count.toString())
-            fragmentHomeBinding.tvCartItemCount.text =
-                "" + count+ " Item  |  "
-            fragmentHomeBinding.tvCartItemPrice.text = amnt
-                //fragmentHomeBinding.tvCartItemCount.text =
-               //     "" + productListViewModel.cartCount.value + " Item  |  "
-                //fragmentHomeBinding.tvCartItemPrice.text = productListViewModel.cartTotalPrice.value
-                fragmentHomeBinding.rlViewCart.visibility = View.VISIBLE
-            }
-        else{
-
-            }*/
-
+        fragmentHomeBinding.rlViewCart.setOnClickListener {
+            val cartIntent1 = Intent(context, CartActivity::class.java)
+            startActivity(cartIntent1)
+        }
 
         fragmentHomeBinding.bannerSlider.setSliderAdapter(dashboardBannerSliderListAdapter)
         fragmentHomeBinding.bannerSlider.currentPagePosition = 0
         fragmentHomeBinding.bannerSlider.setIndicatorAnimation(IndicatorAnimationType.WORM);
         fragmentHomeBinding.bannerSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
 
-    }
+        }
+
+
 
 
     override fun onResume() {

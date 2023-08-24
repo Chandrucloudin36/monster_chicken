@@ -1,3 +1,19 @@
 # ninja log v5
-0	697	1692595276454898376	CMakeFiles/cloudin-jni.dir/cloudin-jni.cpp.o	a0ccc7131e2b4dd3
-700	787	1692595276551922579	/Users/cloudin/Desktop/chandru/mc/monster_chicken_android-main/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/arm64-v8a/libcloudin-jni.so	c19b7b78d8a6ac6b
+0	2007	1692850495749070408	CMakeFiles/cloudin-jni.dir/cloudin-jni.cpp.o	2e837972c631a09b
+2009	2091	1692850495839583675	/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/arm64-v8a/libcloudin-jni.so	16bba13833a0945b
+1	15	0	clean	f4d60a9d437a1758
+0	16	0	clean	f4d60a9d437a1758
+1	18	0	clean	f4d60a9d437a1758
+0	11	0	clean	f4d60a9d437a1758
+0	11	0	clean	f4d60a9d437a1758
+0	11	0	clean	f4d60a9d437a1758
+0	1052	1692850656524386141	CMakeFiles/cloudin-jni.dir/cloudin-jni.cpp.o	2e837972c631a09b
+1052	1161	1692850656641332036	/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/arm64-v8a/libcloudin-jni.so	16bba13833a0945b
+0	33	0	clean	f4d60a9d437a1758
+0	13	0	clean	f4d60a9d437a1758
+0	12	0	clean	f4d60a9d437a1758
+0	12	0	clean	f4d60a9d437a1758
+0	13	0	clean	f4d60a9d437a1758
+0	12	0	clean	f4d60a9d437a1758
+2	1267	1692852249433947002	CMakeFiles/cloudin-jni.dir/cloudin-jni.cpp.o	2e837972c631a09b
+1268	1381	1692852249550352370	/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/arm64-v8a/libcloudin-jni.so	16bba13833a0945b

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/cloudin/Desktop/chandru/mc/monster_chicken_android-main/app/src/main/cpp
+# Install script for directory: /Users/cloudin/Desktop/chandru/mc/monster_chicken/app/src/main/cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/cloudin/Desktop/chandru/mc/monster_chicken_android-main/app/.cxx/Debug/1c2s1yk4/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/.cxx/Debug/1c2s1yk4/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

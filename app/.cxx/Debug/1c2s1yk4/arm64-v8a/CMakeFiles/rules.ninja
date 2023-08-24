@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /Users/cloudin/Library/Android/sdk/cmake/3.22.1/bin/cmake --regenerate-during-build -S/Users/cloudin/Desktop/chandru/mc/monster_chicken_android-main/app/src/main/cpp -B/Users/cloudin/Desktop/chandru/mc/monster_chicken_android-main/app/.cxx/Debug/1c2s1yk4/arm64-v8a
+  command = /Users/cloudin/Library/Android/sdk/cmake/3.22.1/bin/cmake --regenerate-during-build -S/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/src/main/cpp -B/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/.cxx/Debug/1c2s1yk4/arm64-v8a
   description = Re-running CMake...
   generator = 1
 

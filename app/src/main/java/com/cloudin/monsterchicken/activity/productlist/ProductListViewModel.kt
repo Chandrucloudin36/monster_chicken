@@ -38,9 +38,9 @@ class ProductListViewModel(application: Application) : CloudInBaseViewModel(appl
 
     fun getCartvalue() {
         val token= CloudInPreferenceManager.getString(USER_UNIQUE_TOKEN, "")
-        Log.d("cartvalueeeeeee","testt")
-        Log.d("cartvalueeeeeee", API_GET_CART_DATA_DASHBOARD +"?unique_token="+token)
-        Log.d("cartvalueeeeeee","testt")
+        Log.d("pdcartvalueeeeeee","testt")
+        Log.d("pdcartvalueeeeeee", API_GET_CART_DATA_DASHBOARD +"?unique_token="+token)
+        Log.d("pdcartvalueeeeeee","testt")
         viewModelScope.launch {
 
             val dashboardCartResponse = callGetApi<DashboardCartResponse>(
@@ -52,15 +52,15 @@ class ProductListViewModel(application: Application) : CloudInBaseViewModel(appl
             )
             if (dashboardCartResponse != null) {
                 if (dashboardCartResponse.status) {
-                    print(dashboardCartResponse.response!!.data!!.total_cart_count)
+                    //print(dashboardCartResponse.response!!.data!!.total_cart_count)
                     cartCount.value=dashboardCartResponse!!.response!!.data!!.total_cart_count
                     cartTotalPrice.value=dashboardCartResponse!!.response!!.data!!.total_cart_price
                     cartCountString.value = "" + cartCount.value + "Items"
                     // cartCountString.value = "" + cartCount.value + "Items"
 
-                    Log.d("dashboardCartResponse1",cartCount.value.toString())
-                    Log.d("dashboardCartResponse2",cartTotalPrice.value.toString())
-                    Log.d("dashboardCartResponse3",dashboardCartResponse.toString())
+                    Log.d("productCartResponse1",cartCount.value.toString())
+                    Log.d("productCartResponse2",cartTotalPrice.value.toString())
+                    Log.d("productCartResponse3",dashboardCartResponse.toString())
 
                 } else {
                     val errorList: MutableList<String> = ArrayList()
@@ -99,10 +99,10 @@ class ProductListViewModel(application: Application) : CloudInBaseViewModel(appl
                         val productCountInt = productItemList.value!!.size
                         productCount.value = "$productCountInt items"
                     }
-                    cartCount.value = dashboardResponse.response!!.cart_details.cart_count
+                    /*cartCount.value = dashboardResponse.response!!.cart_details.cart_count
                     cartTotalPrice.value =
                         dashboardResponse.response!!.cart_details.cart_total_amount
-                    cartCountString.value = "" + cartCount.value + "Items"
+                    cartCountString.value = "" + cartCount.value + "Items"*/
 
                     if (cartCount.value!! > 0) {
                         cartItemList.value = mutableListOf()
@@ -145,7 +145,7 @@ class ProductListViewModel(application: Application) : CloudInBaseViewModel(appl
                     if (dashboardResponse.status) {
                         isNeedsToUpdateCartCount.value = true
                         getProductList()
-                     //  getCartvalue()
+                       getCartvalue()
                     } else {
                         val errorList: MutableList<String> = ArrayList()
                         errorList.addAll(dashboardResponse.message!!)
@@ -177,7 +177,7 @@ class ProductListViewModel(application: Application) : CloudInBaseViewModel(appl
                             if (dashboardResponse.status) {
                                 isNeedsToUpdateCartCount.value = true
                                 getProductList()
-                                //getCartvalue()
+                                getCartvalue()
                             } else {
                                 val errorList: MutableList<String> = ArrayList()
                                 errorList.addAll(dashboardResponse.message!!)

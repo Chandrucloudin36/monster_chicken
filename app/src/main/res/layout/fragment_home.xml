@@ -363,6 +363,26 @@
 
         </LinearLayout>
 
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search for any product"
+            android:focusableInTouchMode="false"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:drawableLeft="@drawable/ic_search_new"
+            android:drawableStart="@drawable/ic_search_new"
+            android:drawablePadding="8dp"
+            android:maxLines="1"
+            android:background="@drawable/search_round"
+            android:focusable="false"
+            android:padding="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+
         <com.cloudin.monsterchicken.utils.autoimageslider.SliderView
             android:id="@+id/bannerSlider"
             android:layout_width="match_parent"

@@ -1,3 +1,19 @@
 # ninja log v5
 0	1693	1692689509456933565	CMakeFiles/cloudin-jni.dir/cloudin-jni.cpp.o	7b05de1d70fdd157
 1695	1800	1692689509572746143	/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/x86_64/libcloudin-jni.so	5eb22f4875e42c6f
+0	55	0	clean	f4d60a9d437a1758
+0	17	0	clean	f4d60a9d437a1758
+0	12	0	clean	f4d60a9d437a1758
+0	14	0	clean	f4d60a9d437a1758
+0	9	0	clean	f4d60a9d437a1758
+0	7	0	clean	f4d60a9d437a1758
+1	774	1692850661111948217	CMakeFiles/cloudin-jni.dir/cloudin-jni.cpp.o	7b05de1d70fdd157
+774	964	1692850661306284922	/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/x86_64/libcloudin-jni.so	5eb22f4875e42c6f
+0	12	0	clean	f4d60a9d437a1758
+0	13	0	clean	f4d60a9d437a1758
+0	13	0	clean	f4d60a9d437a1758
+0	13	0	clean	f4d60a9d437a1758
+0	13	0	clean	f4d60a9d437a1758
+0	14	0	clean	f4d60a9d437a1758
+1	1916	1692852256555894755	CMakeFiles/cloudin-jni.dir/cloudin-jni.cpp.o	7b05de1d70fdd157
+1917	2037	1692852256684162147	/Users/cloudin/Desktop/chandru/mc/monster_chicken/app/build/intermediates/cxx/Debug/1c2s1yk4/obj/x86_64/libcloudin-jni.so	5eb22f4875e42c6f
